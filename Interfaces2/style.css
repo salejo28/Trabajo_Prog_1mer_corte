@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    padding: 20px 0;
+    width: 80%;
+}
+
+.container #dibujo {
+    margin-top: 10px;
+    max-width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container #dibujo #tanque {
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+    bottom: 20px;
+    left: 500px;
+}
+
+.container #dibujo #nubes {
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    top: 200px;
+    animation: fondo1 1s ease infinite 2s;
+}
+
+.container #dibujo #cloud1,
+.container #dibujo #cloud2,
+.container #dibujo #cloud3 {
+    position: absolute;
+    width: 100px;
+    right: 0;
+}
+
+.container #dibujo #cloud1 {
+    top: 35%;
+    transform: translate(100%, -35%);
+    animation: clouds 1s ease infinite;
+}
+
+.container #dibujo #cloud2 {
+    top: 60%;
+    transform: translate(100%, -60%);
+    animation: clouds 1s ease infinite 2s;
+}
+
+.container #dibujo #cloud3 {
+    top: 85%;
+    transform: translate(100%, -85%);
+    animation: clouds 1s ease infinite 1s;
+}
+
+.container #dibujo #airplane {
+    width: 200px;
+}
+
+.container #dibujo #mar {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    bottom: -30px;
+}
+
+.container #dibujo #barco {
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    bottom: 10px;
+    animation: barco 1s ease infinite alternate;
+}
+
+.content {
+    display: flex;
+}
+
+.container button {
+    padding: 10px 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #457b9d;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s all ease;
+}
+
+.container button:hover {
+    background: #3a6c8b;
+}
+
+.container .content_btns_vehicles {
+    width: 50%;
+}
+
+@keyframes clouds {
+    from {
+        right: 0;
+    }
+    to {
+        right: 130%;
+    }
+}
+
+@keyframes fondo1 {
+    from {
+        right: 0;
+    }
+    to {
+        right: 300%;
+    }
+}
+
+@keyframes barco {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(30px);
+    }
+}
